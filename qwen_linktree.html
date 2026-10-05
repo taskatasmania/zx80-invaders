@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resource Cards</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f4f4f5;
+      color: #18181b;
+      margin: 0;
+      padding: 24px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background-color: #e4e4e7;
+    }
+
+    .card-content {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+      line-height: 1.4;
+      color: #09090b;
+    }
+
+    .card-subtitle {
+      font-size: 0.95rem;
+      color: #52525b;
+      margin: 0 0 8px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-grid">
+
+    <!-- Card 1 --> 
+    <a href="https://aboriginallaunceston.com.au/" target="_blank" class="card-link">
+      <article class="card">
+        <img class="card-image" src="https://ugc.production.linktr.ee/49a9265e-9688-4911-a0d3-0fb16071a255_image.png?io=true&size=thumbnail-stack_v1_0" alt="Aboriginal History Resource" loading="lazy">
+        <div class="card-content">
+          <h2 class="card-title">Aboriginal History Resource</h2>
+          <p class="card-subtitle">Regional Aboriginal History</p>
+        </div>
+      </article>
+    </a>
+
+    <!-- Card 2 --> 
+    <a href="https://theconversation.com/the-biggest-estate-on-earth-how-aborigines-made-australia-3787" target="_blank" class="card-link">
+      <article class="card">
+        <img class="card-image" src="https://ugc.production.linktr.ee/d90316cc-cd6a-41be-be73-2dcdd372c575_fire.jpeg?io=true&size=thumbnail-stack_v1_0" alt="Prof. Bill Gammage: The biggest estate on earth: how Aborigines made Australia" loading="lazy">
+        <div class="card-content">
+          <h2 class="card-title">Prof. Bill Gammage: The biggest estate on earth: how Aborigines made Australia</h2>
+          <p class="card-subtitle">Prof. Bill Gammage: The biggest estate on earth: how Aborigines made Australia</p>
+        </div>
+      </article>
+    </a>
+
+ <!-- Card 3 --> 
+
+    <a href="https://theconversation.com/the-biggest-estate-on-earth-how-aborigines-made-australia-3787" target="_blank" class="card-link">
+  <article class="card">
+    <img class="card-image" src="https://ugc.production.linktr.ee/d90316cc-cd6a-41be-be73-2dcdd372c575_fire.jpeg?io=true&size=thumbnail-stack_v1_0" alt="Prof. Bill Gummage: The biggest estate on earth: how Aborigines made Australia" loading="lazy">
+    <div class="card-content">
+      <h2 class="card-title">Prof. Bill Gummage: The biggest estate on earth: how Aborigines made Australia</h2>
+      <p class="card-subtitle">Prof. Bill Gummage: The biggest estate on earth: how Aborigines made Australia</p>
+    </div>
+  </article>
+</a>
+
+
+  </div>
+
+</body>
+</html>
