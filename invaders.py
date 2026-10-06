@@ -12,7 +12,7 @@ SCREEN_HEIGHT = 900
 PLAYER_COLOR = (0, 255, 0)
 INVADER_COLOR = (255, 0, 0)
 BULLET_COLOR = (255, 255, 255)
-ENEMY_BULLET_COLOR = (255, 165, 0)  # Deepseeks enemy bullet colour
+ENEMY_BULLET_COLOR = (255, 165, 0)  # Orange
 FPS = 60
 
 
@@ -35,7 +35,7 @@ class Player(pygame.sprite.Sprite):
             self.rect.x -= 5
         if keys[pygame.K_RIGHT] and self.rect.right < SCREEN_WIDTH:
             self.rect.x += 5
-
+player_group = pygame.sprite.GroupSingle(Player())
 
 class Bullet(pygame.sprite.Sprite):
     def __init__(self):
@@ -68,6 +68,8 @@ class EnemyBullet(pygame.sprite.Sprite):
 
 bullet_group = pygame.sprite.Group()
 
+enemy_bullet_group = pygame.sprite.Group()  # New group for enemy bullets
+
 
 def setup_invaders():
     invaders = []
@@ -83,7 +85,7 @@ def setup_invaders():
 invaders_list = setup_invaders()
 
 score = 0
-font = pygame.font.SysFont(None, 36)
+font = pygame.font.SysFont(None, 36)  # Corrected line
 
 
 def main():
@@ -143,6 +145,9 @@ def main():
         bullet_group.update()
         bullet_group.draw(screen)
 
+        enemy_bullet_group.update()  # New line to update enemy bullets
+        enemy_bullet_group.draw(screen)  # New line to draw enemy bullets
+
         # Draw score
         score_text = font.render(f"Score: {score}", True, (255, 255, 255))
         screen.blit(score_text, (10, 10))
@@ -155,5 +160,5 @@ def main():
 
 
 if __name__ == "__main__":
-    player_group = pygame.sprite.GroupSingle(Player())
+    
     main()
