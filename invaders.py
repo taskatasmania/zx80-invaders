@@ -12,7 +12,7 @@ SCREEN_HEIGHT = 900
 PLAYER_COLOR = (0, 255, 0)
 INVADER_COLOR = (255, 0, 0)
 BULLET_COLOR = (255, 255, 255)
-ENEMY_BULLET_COLOR = (255, 100, 100)  # Light red for enemy bullets
+ENEMY_BULLET_COLOR = (255, 165, 0)  # Deepseeks enemy bullet colour
 FPS = 60
 
 
