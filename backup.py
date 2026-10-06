@@ -45,7 +45,7 @@ def setup_invaders():
     for row in range(8):
         for col in range(5):
             x = (col * (64 + 10)) + 25  # Spacing between invaders and some padding on the left
-            y = -20 + (row * (32 + 10))  # Spacing between rows with some padding at the top
+            y = 10 + (row * (32 + 10))  # Spacing between rows with some padding at the top
             invader = pygame.Rect(x, y, 64, 32)
             invaders.append(invader)
     return invaders
