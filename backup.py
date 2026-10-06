@@ -12,7 +12,6 @@ SCREEN_HEIGHT = 900
 PLAYER_COLOR = (0, 255, 0)
 INVADER_COLOR = (255, 0, 0)
 BULLET_COLOR = (255, 255, 255)
-ENEMY_BULLET_COLOR = (255, 100, 100)  # Light red for enemy bullets
 FPS = 60
 
 
@@ -37,6 +36,9 @@ class Player(pygame.sprite.Sprite):
             self.rect.x += 5
 
 
+player_group = pygame.sprite.GroupSingle(Player())
+
+
 class Bullet(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
@@ -48,21 +50,6 @@ class Bullet(pygame.sprite.Sprite):
     def update(self):
         self.rect.y += self.speed
         if self.rect.bottom < 0:
-            self.kill()
-
-
-class EnemyBullet(pygame.sprite.Sprite):
-    def __init__(self, invader_rect):
-        super().__init__()
-        self.image = pygame.Surface((4, 8))
-        self.image.fill(ENEMY_BULLET_COLOR)
-        self.rect = self.image.get_rect()
-        self.rect.midtop = invader_rect.midbottom
-        self.speed = 5
-
-    def update(self):
-        self.rect.y += self.speed
-        if self.rect.bottom > SCREEN_HEIGHT:
             self.kill()
 
 
@@ -155,5 +142,4 @@ def main():
 
 
 if __name__ == "__main__":
-    player_group = pygame.sprite.GroupSingle(Player())
     main()
